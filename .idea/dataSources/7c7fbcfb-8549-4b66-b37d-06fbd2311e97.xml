@@ -1,0 +1,235 @@
+<dataSource name="MySQL - mySchoolDB@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="myschooldb">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="information_schema" />
+    <schema id="3" name="mysql" />
+    <schema id="4" name="performance_schema" />
+    <schema id="5" name="phpmyadmin" />
+    <schema id="6" name="test" />
+    <table id="7" parent="1" name="absent" />
+    <table id="8" parent="1" name="detention" />
+    <table id="9" parent="1" name="homework" />
+    <table id="10" parent="1" name="mark" />
+    <table id="11" parent="1" name="parent" />
+    <table id="12" parent="1" name="student" />
+    <table id="13" parent="1" name="subject" />
+    <table id="14" parent="1" name="teacher" />
+    <table id="15" parent="1" name="timetable" />
+    <table id="16" parent="1" name="users" />
+    <column id="17" parent="7" name="absent_id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="18" parent="7" name="date">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="19" parent="7" name="student_nr">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="20" parent="7" name="subject">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="21" parent="7" name="PRIMARY">
+      <columns>absent_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="22" parent="8" name="detention_id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="23" parent="8" name="amount_hours">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="24" parent="8" name="date">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="25" parent="8" name="reason">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="26" parent="8" name="student_nr">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <key id="27" parent="8" name="PRIMARY">
+      <columns>detention_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="28" parent="9" name="homework_id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="29" parent="9" name="description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="30" parent="9" name="due_date">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="31" parent="9" name="subject">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="32" parent="9" name="PRIMARY">
+      <columns>homework_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="33" parent="10" name="mark_id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="34" parent="10" name="date">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="35" parent="10" name="mark">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="36" parent="10" name="title">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="37" parent="10" name="PRIMARY">
+      <columns>mark_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="38" parent="11" name="parent_id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="39" parent="11" name="cellphone_nr">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="40" parent="11" name="e_mail">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="41" parent="11" name="first_name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="42" parent="11" name="student_nr">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="43" parent="11" name="surname">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="44" parent="11" name="telephone_nr">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="45" parent="11" name="PRIMARY">
+      <columns>parent_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="46" parent="12" name="student_id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="47" parent="12" name="cellphone_nr">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="48" parent="12" name="class_nr">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="49" parent="12" name="e_mail">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="50" parent="12" name="first_name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="51" parent="12" name="surname">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="52" parent="12" name="PRIMARY">
+      <columns>student_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="53" parent="13" name="subject_code">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="54" parent="13" name="description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="55" parent="13" name="prescribed_book">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="56" parent="13" name="title">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="57" parent="13" name="PRIMARY">
+      <columns>subject_code</columns>
+      <primary>1</primary>
+    </key>
+    <column id="58" parent="14" name="teacher_id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="59" parent="14" name="cell">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="60" parent="14" name="dob">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="61" parent="14" name="e_mail">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="62" parent="14" name="gender">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="63" parent="14" name="last_name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="64" parent="14" name="name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="65" parent="14" name="PRIMARY">
+      <columns>teacher_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="66" parent="15" name="timetable_id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="67" parent="15" name="day">
+      <mandatory>1</mandatory>
+      <data-type>double|0</data-type>
+    </column>
+    <column id="68" parent="15" name="period">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="69" parent="15" name="room_nr">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="70" parent="15" name="subject">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="71" parent="15" name="time">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="72" parent="15" name="PRIMARY">
+      <columns>timetable_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="73" parent="16" name="user_id">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="74" parent="16" name="password">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="75" parent="16" name="role">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="76" parent="16" name="PRIMARY">
+      <columns>user_id</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
